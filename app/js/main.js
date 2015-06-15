@@ -62,19 +62,22 @@ var deleteContact = function(event){
 
   event.preventDefault();
 
-  var deleting = $(this).parent().parent();
-  var idDelete = deleting.attr('_id');
+  var deleting = $(this).parent();
+  var idDelete = deleting.attr('id');
 
   myContacts.get(idDelete).destroy().success(function(){
 
-    deleting.parent().fadeout();
-    deleting.fadeout();
+    deleting.fadeOut();
+    deleting.fadeOut();
 
 console.log(this);
 
   });
 
 };
+
+
+
 
 
 var contactShowUp = function(contact){
@@ -96,7 +99,7 @@ var contactShowUp = function(contact){
 
 $('.forms').on('submit', addContact);
 
-$('#contactList').on('click', '#delete', deleteContact);
+$('#contactList').on('click', 'span', deleteContact);
 
 
 
