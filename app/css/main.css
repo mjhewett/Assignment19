@@ -1,7 +1,68 @@
-div {
-  display: inline-block;
-  margin-top: 50px;
-  margin-left: 50px; }
-
 h1 {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Monoton', cursive;
+  font-size: 75px;
+  margin-bottom: 0px;
+  background-color: #86ADBF;
+  margin-top: 0;
+  padding-left: 80px;
+  padding-bottom: 50px;
+  padding-top: 50px; }
+
+form {
+  font-family: 'Pompiere', cursive;
+  font-size: 20px;
+  display: inline-block;
+  background-color: #D9DB95;
+  width: 100%;
+  padding-bottom: 25px; }
+
+.addContact {
+  display: inline-block;
+  height: 180px;
+  width: 180px;
+  border-radius: 38%;
+  border: 3px solid #86ADBF;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 90px;
+  background-color: #C54C43; }
+
+.inputs {
+  display: inline-flex;
+  margin-top: 0px;
+  margin-left: 39px;
+  line-height: 10px; }
+
+.inp {
+  border: 1px solid;
+  margin-left: 15px;
+  padding: 10px; }
+
+ul {
+  background-color: #86ADBF;
+  margin-top: 0px;
+  list-style-type: none;
+  font-family: 'Pompiere', cursive;
+  font-size: 18px;
+  padding-top: 35px;
+  padding-bottom: 75px; }
+
+.list {
+  border: 1px solid;
+  width: 50%;
+  display: block;
+  line-height: 30px;
+  margin-top: 10px; }
+
+span {
+  float: right;
+  margin-right: 0px;
+  color: white;
+  background-color: #C54C43;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+span:hover {
+  color: #86ADBF;
+  opacity: 0.99; }

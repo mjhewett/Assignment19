@@ -13,11 +13,11 @@ var myContacts = new ContactCollection();
 
 
 
-var addContact = function(x){
+var addContact = function(event){
 
-  x.peventDefault();
+  event.preventDefault();
 
-  var contactName = $('#addName').val();
+  var contactName = $(this).find('#addName').val();
 
   var contactEmail = $(this).find('#addEmail').val();
 
@@ -27,7 +27,7 @@ var addContact = function(x){
 
   var contactLink = $(this).find('#addLinkdin').val();
 
-
+console.log('working');
 
   var c = new Contact ({
 
@@ -38,7 +38,11 @@ var addContact = function(x){
     linkdin: contactLink
 
 
+
+
   });
+
+console.log(c);
 
 // $('#forms').on('submit',
 
@@ -52,14 +56,36 @@ this.reset();
 
 };
 
+
+
+var deleteContact = function(event){
+
+  event.preventDefault();
+
+  var deleting = $(this).parent().parent();
+  var idDelete = deleting.attr('_id');
+
+  myContacts.get(idDelete).destroy().success(function(){
+
+    deleting.parent().fadeout();
+    deleting.fadeout();
+
+console.log(this);
+
+  });
+
+};
+
+
 var contactShowUp = function(contact){
 
 
-  var contactPage = "<li id='" + contact._id + "'>";
-      contactPage += contact.name + contact.email + contact.phone + contact.twitter + contact.linkdin;
-      contactPage += "</li>";
-      $('#contactList').prepend(contactPage);
+  var contactPage =   "<li class='list' id='" + contact._id + "'>";
+      contactPage += "Name: " + contact.name + " Email: " + contact.email + " Phone: " + contact.phone + " Twitter: " + contact.twitter + " Linkdin: " + contact.linkdin;
+      contactPage += "<span id='delete'>" + 'Delete Contact' + "</span>" + "</li>";
 
+
+      $('#contactList').prepend(contactPage);
 
 };
 
@@ -67,7 +93,11 @@ var contactShowUp = function(contact){
 
 
 
-$('#forms').on('submit', addContact);
+
+$('.forms').on('submit', addContact);
+
+$('#contactList').on('click', '#delete', deleteContact);
+
 
 
 

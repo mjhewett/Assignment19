@@ -9,6 +9,7 @@ var Contact = Backbone.Model.extend({
    this.logPhone();
    this.logTwit();
    this.logLink();
+   // this.logStatus();
 },
 
 idAttribute: '_id',
@@ -20,6 +21,7 @@ email: '',
 phone: '',
 twitter: '',
 linkdin: ''
+
 
 },
 
@@ -44,6 +46,10 @@ logLink: function(){
   console.log(this.get('linkdin'));
 }
 
+
+// logStatus: function(){
+//   console.log(this.get())
+// }
 
 });
 
