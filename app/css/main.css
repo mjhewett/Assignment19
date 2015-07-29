@@ -53,7 +53,8 @@ ul {
   width: 50%;
   display: block;
   line-height: 30px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  height: 100px; }
 
 span {
   float: right;
@@ -66,3 +67,6 @@ span {
 span:hover {
   color: #86ADBF;
   opacity: 0.99; }
+
+.woo {
+  display: block; }

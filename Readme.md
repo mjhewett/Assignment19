@@ -1,6 +1,7 @@
-## Welcome to My Repo
+## Contact List
 
-> I am your Readme.md file, you should probably update me.
+> This is a contact list build in Backbone JS.
+>Deployed Site: http://development.assignment19-maxh.divshot.io/
 
 
 ## Usage

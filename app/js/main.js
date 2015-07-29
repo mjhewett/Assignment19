@@ -84,7 +84,7 @@ var contactShowUp = function(contact){
 
 
   var contactPage =   "<li class='list' id='" + contact._id + "'>";
-      contactPage += "Name: " + contact.name + " Email: " + contact.email + " Phone: " + contact.phone + " Twitter: " + contact.twitter + " Linkdin: " + contact.linkdin;
+      contactPage += "<div class='woo name'>" + "Name: " + contact.name + "</div>" + "<div class='woo mail'>" + " Email: " + contact.email + "</div" + "<div class='woo phone'>" + " Phone: " + contact.phone + "</div" + "<div class='woo twitts'>" + " Twitter: " + contact.twitter + "</div>" + "<div class='woo links'>" + " Linkdin: " + contact.linkdin + "</div>";
       contactPage += "<span id='delete'>" + 'Delete Contact' + "</span>" + "</li>";
 
 
